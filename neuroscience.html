@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neuroscience - Proxilaze Medical & Science Blog</title>
+    <meta name="description" content="Explore the latest in neuroscience research, brain-computer interfaces, neurological treatments, and cognitive science breakthroughs.">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="min-h-screen bg-gradient-to-br from-pastel-purple via-pastel-blue to-pastel-green">
+        <!-- Navigation -->
+        <nav class="glass-effect sticky top-0 z-50 px-4 py-3">
+            <div class="max-w-7xl mx-auto flex items-center justify-between">
+                <div class="flex items-center space-x-2">
+                    <div class="logo-placeholder w-8 h-8"></div>
+                    <span class="text-2xl font-bold text-slate-800">Proxilaze</span>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-slate-700 hover:text-soft-purple transition-colors duration-300">Home</a>
+                    <a href="articles.html" class="text-slate-700 hover:text-soft-purple transition-colors duration-300">Articles</a>
+                    <div class="relative dropdown">
+                        <button class="text-soft-purple font-semibold flex items-center space-x-1" id="categories-dropdown">
+                            <span>Categories</span>
+                            <i data-lucide="chevron-down" class="w-4 h-4"></i>
+                        </button>
+                        <div class="dropdown-menu glass-card absolute top-full left-0 mt-2 w-48 rounded-lg shadow-lg opacity-0 invisible transition-all duration-300">
+                            <a href="genetics.html" class="block px-4 py-2 text-slate-700 hover:text-soft-purple hover:bg-white/20 rounded-t-lg transition-colors">Genetics</a>
+                            <a href="neuroscience.html" class="block px-4 py-2 text-soft-purple font-semibold hover:bg-white/20 transition-colors">Neuroscience</a>
+                            <a href="immunology.html" class="block px-4 py-2 text-slate-700 hover:text-soft-purple hover:bg-white/20 transition-colors">Immunology</a>
+                            <a href="cardiology.html" class="block px-4 py-2 text-slate-700 hover:text-soft-purple hover:bg-white/20 rounded-b-lg transition-colors">Cardiology</a>
+                        </div>
+                    </div>
+                    <a href="about.html" class="text-slate-700 hover:text-soft-purple transition-colors duration-300">About</a>
+                    <a href="contact.html" class="text-slate-700 hover:text-soft-purple transition-colors duration-300">Contact</a>
+                </div>
+                
+                <div class="flex items-center space-x-4">
+                    <button class="glass-card rounded-full p-2 text-slate-700 hover:text-soft-purple transition-all duration-300">
+                        <i data-lucide="search" class="w-4 h-4"></i>
+                    </button>
+                    <button id="mobile-menu-btn" class="md:hidden glass-card rounded-full p-2 text-slate-700">
+                        <i data-lucide="menu" class="w-4 h-4"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Header Section -->
+        <section class="py-20 px-4">
+            <div class="max-w-7xl mx-auto text-center">
+                <div class="glass-card rounded-3xl p-12 mb-12">
+                    <i data-lucide="brain" class="w-20 h-20 text-soft-cyan mx-auto mb-6"></i>
+                    <h1 class="text-4xl md:text-6xl font-bold text-slate-800 mb-6">Neuroscience</h1>
+                    <p class="text-xl text-slate-600 max-w-3xl mx-auto">
+                        Discover the latest breakthroughs in brain research, neurological treatments, and cognitive science innovations.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Content Editor Section -->
+        <section class="py-12 px-4">
+            <div class="max-w-7xl mx-auto">
+                <div class="glass-card rounded-3xl p-8 mb-12">
+                    <div class="text-center mb-8">
+                        <h2 class="text-3xl font-bold text-slate-800 mb-4">Add Neuroscience Research</h2>
+                        <p class="text-slate-600">Create content focused on brain research and neurological discoveries</p>
+                    </div>
+                    
+                    <form id="neuroscience-form" class="max-w-4xl mx-auto">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label class="block text-slate-700 font-semibold mb-2">Research Area</label>
+                                <select class="w-full px-4 py-3 rounded-lg glass-effect border-0 focus:ring-2 focus:ring-soft-purple text-slate-800 focus:outline-none">
+                                    <option value="">Select Research Area</option>
+                                    <option value="cognitive">Cognitive Neuroscience</option>
+                                    <option value="clinical">Clinical Neuroscience</option>
+                                    <option value="computational">Computational Neuroscience</option>
+                                    <option value="behavioral">Behavioral Neuroscience</option>
+                                    <option value="developmental">Developmental Neuroscience</option>
+                                    <option value="molecular">Molecular Neuroscience</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-slate-700 font-semibold mb-2">Study Type</label>
+                                <select class="w-full px-4 py-3 rounded-lg glass-effect border-0 focus:ring-2 focus:ring-soft-purple text-slate-800 focus:outline-none">
+                                    <option value="">Select Study Type</option>
+                                    <option value="fmri">fMRI Study</option>
+                                    <option value="eeg">EEG Research</option>
+                                    <option value="clinical-trial">Clinical Trial</option>
+                                    <option value="animal-study">Animal Study</option>
+                                    <option value="computational">Computational Model</option>
+                                    <option value="review">Review/Meta-analysis</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+                            <div>
+                                <label class="block text-slate-700 font-semibold mb-2">Lead Researcher</label>
+                                <input type="text" class="w-full px-4 py-3 rounded-lg glass-effect border-0 focus:ring-2 focus:ring-soft-purple placeholder-slate-500 text-slate-800 focus:outline-none" placeholder="Dr. Emily Watson">
+                            </div>
+                            <div>
+                                <label class="block text-slate-700 font-semibold mb-2">Institution</label>
+                                <input type="text" class="w-full px-4 py-3 rounded-lg glass-effect border-0 focus:ring-2 focus:ring-soft-purple placeholder-slate-500 text-slate-800 focus:outline-none" placeholder="MIT Brain Research Center">
+                            </div>
+                            <div>
+                                <label class="block text-slate-700 font-semibold mb-2">Sample Size</label>
+                                <input type="number" class="w-full px-4 py-3 rounded-lg glass-effect border-0 focus:ring-2 focus:ring-soft-purple placeholder-slate-500 text-slate-800 focus:outline-none" placeholder="150">
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label class="block text-slate-700 font-semibold mb-2">Research Title</label>
+                            <input type="text" class="w-full px-4 py-3 rounded-lg glass-effect border-0 focus:ring-2 focus:ring-soft-purple placeholder-slate-500 text-slate-800 focus:outline-none" placeholder="Novel Brain-Computer Interface Enables Paralyzed Patients to Control Robotic Arms">
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label class="block text-slate-700 font-semibold mb-2">Key Findings</label>
+                            <textarea rows="4" class="w-full px-4 py-3 rounded-lg glass-effect border-0 focus:ring-2 focus:ring-soft-purple placeholder-slate-500 text-slate-800 focus:outline-none resize-none" placeholder="Summarize the key findings and their significance..."></textarea>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label class="block text-slate-700 font-semibold mb-2">Methodology & Results</label>
+                            <textarea rows="8" class="w-full px-4 py-3 rounded-lg glass-effect border-0 focus:ring-2 focus:ring-soft-purple placeholder-slate-500 text-slate-800 focus:outline-none resize-none" placeholder="Detailed description of research methodology, data collection, analysis, and comprehensive results..."></textarea>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label class="block text-slate-700 font-semibold mb-2">Clinical Implications</label>
+                            <textarea rows="4" class="w-full px-4 py-3 rounded-lg glass-effect border-0 focus:ring-2 focus:ring-soft-purple placeholder-slate-500 text-slate-800 focus:outline-none resize-none" placeholder="Explain how this research could impact patient care and treatment..."></textarea>
+                        </div>
+                        
+                        <div class="text-center">
+                            <button type="submit" class="px-8 py-4 bg-soft-cyan text-white rounded-full font-semibold hover:bg-cyan-600 transition-colors duration-300 transform hover:scale-105">
+                                <i data-lucide="plus" class="w-4 h-4 mr-2 inline"></i>
+                                Publish Neuroscience Research
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Research -->
+        <section class="py-12 px-4">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-4">Featured Neuroscience Research</h2>
+                    <p class="text-lg text-slate-600">Cutting-edge discoveries in brain science and neurological medicine</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Research Card 1 -->
+                    <div class="glass-card rounded-2xl overflow-hidden blog-card transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+                        <img src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400" alt="Brain Computer Interface" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <div class="flex items-center space-x-2 mb-3">
+                                <span class="px-3 py-1 bg-pastel-yellow text-slate-700 rounded-full text-sm font-medium">Brain-Computer Interface</span>
+                                <span class="text-slate-500 text-sm">Dec 18, 2024</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-800 mb-3">Revolutionary BCI Restores Speech in Paralyzed Patients</h3>
+                            <p class="text-slate-600 mb-4 line-clamp-3">Breakthrough brain-computer interface technology enables paralyzed patients to communicate at unprecedented speeds through thought alone.</p>
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center space-x-2">
+                                    <i data-lucide="user" class="w-4 h-4 text-soft-purple"></i>
+                                    <span class="text-sm text-slate-600">Dr. Emily Watson</span>
+                                </div>
+                                <span class="text-sm text-slate-500">15 min read</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Research Card 2 -->
+                    <div class="glass-card rounded-2xl overflow-hidden blog-card transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+                        <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400" alt="Alzheimer's Research" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <div class="flex items-center space-x-2 mb-3">
+                                <span class="px-3 py-1 bg-pastel-yellow text-slate-700 rounded-full text-sm font-medium">Alzheimer's Disease</span>
+                                <span class="text-slate-500 text-sm">Dec 16, 2024</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-800 mb-3">New Drug Slows Alzheimer's Progression by 35%</h3>
+                            <p class="text-slate-600 mb-4 line-clamp-3">Clinical trial results show promising new treatment significantly slows cognitive decline in early-stage Alzheimer's patients.</p>
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center space-x-2">
+                                    <i data-lucide="user" class="w-4 h-4 text-soft-purple"></i>
+                                    <span class="text-sm text-slate-600">Dr. Michael Torres</span>
+                                </div>
+                                <span class="text-sm text-slate-500">12 min read</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Research Card 3 -->
+                    <div class="glass-card rounded-2xl overflow-hidden blog-card transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+                        <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400" alt="Neural Plasticity" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <div class="flex items-center space-x-2 mb-3">
+                                <span class="px-3 py-1 bg-pastel-yellow text-slate-700 rounded-full text-sm font-medium">Neural Plasticity</span>
+                                <span class="text-slate-500 text-sm">Dec 14, 2024</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-800 mb-3">Breakthrough in Stroke Recovery Through Neuroplasticity</h3>
+                            <p class="text-slate-600 mb-4 line-clamp-3">New therapeutic approaches harness brain plasticity to dramatically improve recovery outcomes for stroke patients.</p>
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center space-x-2">
+                                    <i data-lucide="user" class="w-4 h-4 text-soft-purple"></i>
+                                    <span class="text-sm text-slate-600">Dr. Lisa Park</span>
+                                </div>
+                                <span class="text-sm text-slate-500">10 min read</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="glass-effect py-16 px-4 mt-20">
+            <div class="max-w-7xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                    <div class="col-span-1 md:col-span-2">
+                        <div class="flex items-center space-x-2 mb-4">
+                            <div class="logo-placeholder w-10 h-10"></div>
+                            <span class="text-2xl font-bold text-slate-800">Proxilaze</span>
+                        </div>
+                        <p class="text-slate-600 mb-6 max-w-md">
+                            Bridging the gap between complex medical research and public understanding through accessible science communication.
+                        </p>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-lg font-semibold text-slate-800 mb-4">Quick Links</h4>
+                        <ul class="space-y-2">
+                            <li><a href="about.html" class="text-slate-600 hover:text-soft-purple transition-colors duration-300">About Us</a></li>
+                            <li><a href="articles.html" class="text-slate-600 hover:text-soft-purple transition-colors duration-300">All Articles</a></li>
+                            <li><a href="contact.html" class="text-slate-600 hover:text-soft-purple transition-colors duration-300">Contact</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-lg font-semibold text-slate-800 mb-4">Categories</h4>
+                        <ul class="space-y-2">
+                            <li><a href="genetics.html" class="text-slate-600 hover:text-soft-purple transition-colors duration-300">Genetics</a></li>
+                            <li><a href="neuroscience.html" class="text-slate-600 hover:text-soft-purple transition-colors duration-300">Neuroscience</a></li>
+                            <li><a href="immunology.html" class="text-slate-600 hover:text-soft-purple transition-colors duration-300">Immunology</a></li>
+                            <li><a href="cardiology.html" class="text-slate-600 hover:text-soft-purple transition-colors duration-300">Cardiology</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="border-t border-slate-200 mt-12 pt-8 text-center">
+                    <p class="text-slate-600">© 2024 Proxilaze. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Proxilaze Medical & Science Blog</title>
+    <meta name="description" content="Get in touch with the Proxilaze team. Contact us for collaborations, questions, or feedback about our medical science content.">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="min-h-screen bg-gradient-to-br from-pastel-purple via-pastel-blue to-pastel-green">
+        <!-- Navigation -->
+        <nav class="glass-effect sticky top-0 z-50 px-4 py-3">
+            <div class="max-w-7xl mx-auto flex items-center justify-between">
+                <div class="flex items-center space-x-2">
+                    <div class="logo-placeholder w-8 h-8"></div>
+                    <span class="text-2xl font-bold text-slate-800">Proxilaze</span>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-slate-700 hover:text-soft-purple transition-colors duration-300">Home</a>
+                    <a href="articles.html" class="text-slate-700 hover:text-soft-purple transition-colors duration-300">Articles</a>
+                    <div class="relative dropdown">
+                        <button class="text-slate-700 hover:text-soft-purple transition-colors duration-300 flex items-center space-x-1" id="categories-dropdown">
+                            <span>Categories</span>
+                            <i data-lucide="chevron-down" class="w-4 h-4"></i>
+                        </button>
+                        <div class="dropdown-menu glass-card absolute top-full left-0 mt-2 w-48 rounded-lg shadow-lg opacity-0 invisible transition-all duration-300">
+                            <a href="genetics.html" class="block px-4 py-2 text-slate-700 hover:text-soft-purple hover:bg-white/20 rounded-t-lg transition-colors">Genetics</a>
+                            <a href="neuroscience.html" class="block px-4 py-2 text-slate-700 hover:text-soft-purple hover:bg-white/20 transition-colors">Neuroscience</a>
+                            <a href="immunology.html" class="block px-4 py-2 text-slate-700 hover:text-soft-purple hover:bg-white/20 transition-colors">Immunology</a>
+                            <a href="cardiology.html" class="block px-4 py-2 text-slate-700 hover:text-soft-purple hover:bg-white/20 rounded-b-lg transition-colors">Cardiology</a>
+                        </div>
+                    </div>
+                    <a href="about.html" class="text-slate-700 hover:text-soft-purple transition-colors duration-300">About</a>
+                    <a href="contact.html" class="text-soft-purple font-semibold">Contact</a>
+                </div>
+                
+                <div class="flex items-center space-x-4">
+                    <button class="glass-card rounded-full p-2 text-slate-700 hover:text-soft-purple transition-all duration-300">
+                        <i data-lucide="search" class="w-4 h-4"></i>
+                    </button>
+                    <button id="mobile-menu-btn" class="md:hidden glass-card rounded-full p-2 text-slate-700">
+                        <i data-lucide="menu" class="w-4 h-4"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Header Section -->
+        <section class="py-20 px-4">
+            <div class="max-w-7xl mx-auto text-center">
+                <div class="glass-card rounded-3xl p-12 mb-12">
+                    <i data-lucide="mail" class="w-20 h-20 text-soft-purple mx-auto mb-6"></i>
+                    <h1 class="text-4xl md:text-6xl font-bold text-slate-800 mb-6">Contact Us</h1>
+                    <p class="text-xl text-slate-600 max-w-3xl mx-auto">
+                        Get in touch with our team for collaborations, questions, or feedback about our medical science content.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Form & Info -->
+        <section class="py-12 px-4">
+            <div class="max-w-7xl mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <!-- Contact Form -->
+                    <div class="glass-card rounded-3xl p-8">
+                        <h2 class="text-3xl font-bold text-slate-800 mb-6">Send us a message</h2>
+                        
+                        <form id="contact-form" class="space-y-6">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-slate-700 font-semibold mb-2">First Name</label>
+                                    <input type="text" id="first-name" class="w-full px-4 py-3 rounded-lg glass-effect border-0 focus:ring-2 focus:ring-soft-purple placeholder-slate-500 text-slate-800 focus:outline-none" placeholder="John" required>
+                                </div>
+                                <div>
+                                    <label class="block text-slate-700 font-semibold mb-2">Last Name</label>
+                                    <input type="text" id="last-name" class="w-full px-4 py-3 rounded-lg glass-effect border-0 focus:ring-2 focus:ring-soft-purple placeholder-slate-500 text-slate-800 focus:outline-none" placeholder="Doe" required>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-slate-700 font-semibold mb-2">Email Address</label>
+                                <input type="email" id="contact-email" class="w-full px-4 py-3 rounded-lg glass-effect border-0 focus:ring-2 focus:ring-soft-purple placeholder-slate-500 text-slate-800 focus:outline-none" placeholder="john@example.com" required>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-slate-700 font-semibold mb-2">Organization (Optional)</label>
+                                <input type="text" id="organization" class="w-full px-4 py-3 rounded-lg glass-effect border-0 focus:ring-2 focus:ring-soft-purple placeholder-slate-500 text-slate-800 focus:outline-none" placeholder="University or Company">
+                            </div>
+                            
+                            <div>
+                                <label class="block text-slate-700 font-semibold mb-2">Subject</label>
+                                <select id="subject" class="w-full px-4 py-3 rounded-lg glass-effect border-0 focus:ring-2 focus:ring-soft-purple text-slate-800 focus:outline-none" required>
+                                    <option value="">Choose a subject</option>
+                                    <option value="collaboration">Research Collaboration</option>
+                                    <option value="content">Content Suggestion</option>
+                                    <option value="press">Press Inquiry</option>
+                                    <option value="feedback">Feedback</option>
+                                    <option value="technical">Technical Issue</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-slate-700 font-semibold mb-2">Message</label>
+                                <textarea id="message" rows="6" class="w-full px-4 py-3 rounded-lg glass-effect border-0 focus:ring-2 focus:ring-soft-purple placeholder-slate-500 text-slate-800 focus:outline-none resize-none" placeholder="Tell us about your inquiry..." required></textarea>
+                            </div>
+                            
+                            <div class="text-center">
+                                <button type="submit" class="px-8 py-4 bg-soft-purple text-white rounded-full font-semibold hover:bg-purple-600 transition-colors duration-300 transform hover:scale-105">
+                                    <i data-lucide="send" class="w-4 h-4 mr-2 inline"></i>
+                                    Send Message
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                    
+                    <!-- Contact Information -->
+                    <div class="space-y-8">
+                        <!-- Office Info -->
+                        <div class="glass-card rounded-2xl p-8">
+                            <h3 class="text-2xl font-bold text-slate-800 mb-6 flex items-center">
+                                <i data-lucide="map-pin" class="w-6 h-6 text-soft-purple mr-3"></i>
+                                Our Office
+                            </h3>
+                            <div class="space-y-4 text-slate-600">
+                                <p>
+                                    <strong>Proxilaze Medical Communications</strong><br>
+                                    123 Science Boulevard, Suite 456<br>
+                                    Medical District<br>
+                                    Boston, MA 02115<br>
+                                    United States
+                                </p>
+                                <p>
+                                    <strong>Phone:</strong> +1 (555) 123-4567<br>
+                                    <strong>Email:</strong> contact@proxilaze.com
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- Department Contacts -->
+                        <div class="glass-card rounded-2xl p-8">
+                            <h3 class="text-2xl font-bold text-slate-800 mb-6 flex items-center">
+                                <i data-lucide="users" class="w-6 h-6 text-soft-cyan mr-3"></i>
+                                Department Contacts
+                            </h3>
+                            <div class="space-y-4 text-slate-600">
+                                <div>
+                                    <p class="font-semibold text-slate-700">Editorial Team</p>
+                                    <p>editorial@proxilaze.com</p>
+                                </div>
+                                <div>
+                                    <p class="font-semibold text-slate-700">Research Partnerships</p>
+                                    <p>partnerships@proxilaze.com</p>
+                                </div>
+                                <div>
+                                    <p class="font-semibold text-slate-700">Media Relations</p>
+                                    <p>media@proxilaze.com</p>
+                                </div>
+                                <div>
+                                    <p class="font-semibold text-slate-700">Technical Support</p>
+                                    <p>support@proxilaze.com</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Social Media -->
+                        <div class="glass-card rounded-2xl p-8">
+                            <h3 class="text-2xl font-bold text-slate-800 mb-6 flex items-center">
+                                <i data-lucide="share-2" class="w-6 h-6 text-soft-amber mr-3"></i>
+                                Follow Us
+                            </h3>
+                            <div class="flex space-x-4">
+                                <button class="glass-card rounded-full p-3 text-slate-600 hover:text-soft-purple hover:bg-white/20 transition-all duration-300">
+                                    <i data-lucide="twitter" class="w-5 h-5"></i>
+                                </button>
+                                <button class="glass-card rounded-full p-3 text-slate-600 hover:text-soft-purple hover:bg-white/20 transition-all duration-300">
+                                    <i data-lucide="linkedin" class="w-5 h-5"></i>
+                                </button>
+                                <button class="glass-card rounded-full p-3 text-slate-600 hover:text-soft-purple hover:bg-white/20 transition-all duration-300">
+                                    <i data-lucide="youtube" class="w-5 h-5"></i>
+                                </button>
+                                <button class="glass-card rounded-full p-3 text-slate-600 hover:text-soft-purple hover:bg-white/20 transition-all duration-300">
+                                    <i data-lucide="instagram" class="w-5 h-5"></i>
+                                </button>
+                            </div>
+                            <p class="text-slate-600 mt-4 text-sm">Stay updated with our latest research articles and scientific discoveries.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="py-12 px-4">
+            <div class="max-w-7xl mx-auto">
+                <div class="glass-card rounded-3xl p-8">
+                    <div class="text-center mb-8">
+                        <h2 class="text-3xl font-bold text-slate-800 mb-4">Frequently Asked Questions</h2>
+                        <p class="text-slate-600">Quick answers to common questions</p>
+                    </div>
+                    
+                    <div class="max-w-4xl mx-auto space-y-6">
+                        <div class="glass-card rounded-lg p-6">
+                            <h3 class="text-lg font-semibold text-slate-800 mb-2">How do you ensure the accuracy of medical information?</h3>
+                            <p class="text-slate-600">All our articles are reviewed by licensed medical professionals and are based on peer-reviewed research. We cite all sources and clearly indicate when research is preliminary or ongoing.</p>
+                        </div>
+                        
+                        <div class="glass-card rounded-lg p-6">
+                            <h3 class="text-lg font-semibold text-slate-800 mb-2">Can I submit research for coverage?</h3>
+                            <p class="text-slate-600">Yes! We welcome submissions from researchers and institutions. Please contact our editorial team with details about your research, including publication status and significance.</p>
+                        </div>
+                        
+                        <div class="glass-card rounded-lg p-6">
+                            <h3 class="text-lg font-semibold text-slate-800 mb-2">Do you offer collaboration opportunities?</h3>
+                            <p class="text-slate-600">We partner with research institutions, medical schools, and healthcare organizations to create educational content. Contact our partnerships team to discuss collaboration opportunities.</p>
+                        </div>
+                        
+                        <div class="glass-card rounded-lg p-6">
+                            <h3 class="text-lg font-semibold text-slate-800 mb-2">How often do you publish new content?</h3>
+                            <p class="text-slate-600">We publish new articles weekly, with breaking news and significant discoveries covered as they emerge. Subscribe to our newsletter to stay updated.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="glass-effect py-16 px-4 mt-20">
+            <div class="max-w-7xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                    <div class="col-span-1 md:col-span-2">
+                        <div class="flex items-center space-x-2 mb-4">
+                            <div class="logo-placeholder w-10 h-10"></div>
+                            <span class="text-2xl font-bold text-slate-800">Proxilaze</span>
+                        </div>
+                        <p class="text-slate-600 mb-6 max-w-md">
+                            Bridging the gap between complex medical research and public understanding through accessible science communication.
+                        </p>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-lg font-semibold text-slate-800 mb-4">Quick Links</h4>
+                        <ul class="space-y-2">
+                            <li><a href="about.html" class="text-slate-600 hover:text-soft-purple transition-colors duration-300">About Us</a></li>
+                            <li><a href="articles.html" class="text-slate-600 hover:text-soft-purple transition-colors duration-300">All Articles</a></li>
+                            <li><a href="contact.html" class="text-slate-600 hover:text-soft-purple transition-colors duration-300">Contact</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-lg font-semibold text-slate-800 mb-4">Categories</h4>
+                        <ul class="space-y-2">
+                            <li><a href="genetics.html" class="text-slate-600 hover:text-soft-purple transition-colors duration-300">Genetics</a></li>
+                            <li><a href="neuroscience.html" class="text-slate-600 hover:text-soft-purple transition-colors duration-300">Neuroscience</a></li>
+                            <li><a href="immunology.html" class="text-slate-600 hover:text-soft-purple transition-colors duration-300">Immunology</a></li>
+                            <li><a href="cardiology.html" class="text-slate-600 hover:text-soft-purple transition-colors duration-300">Cardiology</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="border-t border-slate-200 mt-12 pt-8 text-center">
+                    <p class="text-slate-600">© 2024 Proxilaze. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
