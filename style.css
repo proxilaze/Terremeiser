@@ -871,8 +871,7 @@ body {
     transition: all 0.3s ease;
 }
 
-.dropdown:hover .dropdown-menu,
-.dropdown.active .dropdown-menu {
+.dropdown-menu.visible {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
