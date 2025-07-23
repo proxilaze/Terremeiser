@@ -1179,3 +1179,10 @@ button:focus {
         color: var(--slate-700);
     }
 }
+.visible {
+    visibility: visible;
+}
+
+.opacity-100 {
+    opacity: 1;
+}
