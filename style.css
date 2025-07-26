@@ -855,6 +855,9 @@ body {
 }
 
 /* Dropdown Styles */
+[hidden] {
+    display: none !important;
+}
 .dropdown {
     position: relative;
 }
