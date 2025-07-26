@@ -45,20 +45,28 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Mobile menu functionality
-    if (mobileMenuBtn && mobileMenu) {
-        mobileMenuBtn.addEventListener('click', function() {
-            const isVisible = mobileMenu.classList.contains('opacity-0');
-            
-            if (isVisible) {
+    // Mobile menu functionality with layout-safe toggle
+if (mobileMenuBtn && mobileMenu) {
+    mobileMenuBtn.addEventListener('click', function () {
+        const isHidden = mobileMenu.classList.contains('hidden');
+
+        if (isHidden) {
+            // Reveal: remove hidden, then animate visible
+            mobileMenu.classList.remove('hidden');
+            requestAnimationFrame(() => {
                 mobileMenu.classList.remove('opacity-0', 'invisible');
                 mobileMenu.classList.add('opacity-100', 'visible');
-            } else {
-                mobileMenu.classList.add('opacity-0', 'invisible');
-                mobileMenu.classList.remove('opacity-100', 'visible');
-            }
-        });
-    }
+            });
+        } else {
+            // Animate hide, then remove from layout
+            mobileMenu.classList.remove('opacity-100', 'visible');
+            mobileMenu.classList.add('opacity-0', 'invisible');
+            setTimeout(() => {
+                mobileMenu.classList.add('hidden');
+            }, 300); // match the transition duration
+        }
+    });
+}
     
     // Newsletter subscription
     if (newsletterForm && newsletterEmail) {
